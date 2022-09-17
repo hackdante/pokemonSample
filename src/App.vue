@@ -2,8 +2,16 @@
   <nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
+    <router-link :to="{ name: 'counter-component' }">Counter</router-link> |
+    <router-link :to="{ name: 'users-view' }">Users</router-link> |
+    <router-link :to="{ name: 'pokemon-view' }">Pokemon</router-link>
   </nav>
-  <router-view/>
+
+  <routerView v-slot="{ Component, route }">
+    <keep-alive>
+      <component :is="Component" :key="route.name" />
+    </keep-alive>
+  </routerView>
 </template>
 
 <style>

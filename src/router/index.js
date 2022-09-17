@@ -14,6 +14,41 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path: '/counter',
+    name: 'counter-component',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/Counter.vue')
+  },
+
+  {
+    path: '/users',
+    name: 'users-view',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/Users.vue')
+  },
+
+  {
+    path: '/pokemon-search',
+    name: 'pokemon-view',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/SearchPokemon.vue')
+  }
+  ,
+  {
+    path: '/pokemon/:id',
+    name: 'pokemon-id',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "counter" */ '../views/Pokemon.vue')
   }
 ]
 
