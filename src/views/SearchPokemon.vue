@@ -25,7 +25,7 @@ export default {
     const router = useRouter();
     const pokemonID = ref(1);
     const searchAutoFocus = ref(null);
-    onActivated(() => searchAutoFocus.value.focus());
+    onActivated(() => searchAutoFocus.value.select());
 
     return {
       pokemonID,
